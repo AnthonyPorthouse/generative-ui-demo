@@ -1,0 +1,30 @@
+{
+  "name": "generative-ui-demo",
+  "private": true,
+  "license": "MIT",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "npx -y tsx src/cli.tsx"
+  },
+  "dependencies": {
+    "@ai-sdk/azure": "^3.0.26",
+    "@ai-sdk/openai": "^3.0.25",
+    "@tailwindcss/vite": "^4.1.18",
+    "ai": "^6.0.67",
+    "dotenv": "^17.2.3",
+    "ink": "^6.6.0",
+    "ink-spinner": "^5.0.0",
+    "react": "^19.2.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/ink-spinner": "^3.0.5",
+    "@types/node": "^24.10.9",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4"
+  }
+}
