@@ -1,6 +1,7 @@
-import { Output, streamText } from "ai";
+import { Output, stepCountIs, streamText } from "ai";
 import { RootSchema } from "../schema/base";
 import { azure } from "@ai-sdk/azure";
+import { getUsers } from "../tools/getUsers";
 
 export async function generateUiResponse(prompt: string) {
     const model = azure.chat('gpt-5-mini');
@@ -9,6 +10,9 @@ export async function generateUiResponse(prompt: string) {
         system: "You are an expert UI/UX designer. Given a user prompt, you will generate a response representing a user interface layout.",
         prompt: prompt,
         model: model,
+        tools: {
+            getUsers
+        },
         output: Output.object({
             schema: RootSchema,
         }),
@@ -18,7 +22,8 @@ export async function generateUiResponse(prompt: string) {
                 reasoningSummary: 'auto',
                 strictJsonSchema: true,
             }
-        }
+        },
+        stopWhen: stepCountIs(5),
     })
 
     return response;

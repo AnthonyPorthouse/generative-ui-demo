@@ -1,9 +1,9 @@
-import { Box, Text, useApp, useInput } from "ink";
+import { Box, useApp, useInput } from "ink";
 import UserInput from "./UserInput";
 import UserOutput from "./UserOutput";
-import Spinner from "ink-spinner";
 import React, { useCallback, useState } from "react";
 import { generateUiResponse } from "../services/ai";
+import Thinking from "./Thinking";
 
 function Tui() {
     
@@ -12,6 +12,7 @@ function Tui() {
 
     const submitQuery = useCallback(async (query: string) => {
         setThinking(true);
+        setResponse("");
         const result = await generateUiResponse(query);
         
         for await (const chunk of result.partialOutputStream) {
@@ -31,7 +32,7 @@ function Tui() {
     return (
         <Box flexDirection="column" gap={1} height="100%">
             <UserInput onSubmit={submitQuery} />
-            {thinking && <Text><Text color="green"><Spinner type="dots" /></Text>{' Thinking'}</Text>}
+            {thinking && <Thinking />}
             {response !== "" && <UserOutput output={response} />}
         </Box>
     )
