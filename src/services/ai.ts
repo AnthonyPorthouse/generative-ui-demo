@@ -6,7 +6,7 @@ import { getUsers } from "../tools/getUsers.js";
 export async function generateUiResponse(prompt: string) {
     const model = azure.chat('gpt-5-mini');
     
-    const response = await streamText({
+    const response = streamText({
         system: "You are an expert UI/UX designer. Given a user prompt, you will generate a response representing a user interface layout.",
         prompt: prompt,
         model: model,
