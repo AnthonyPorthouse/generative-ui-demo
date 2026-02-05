@@ -1,8 +1,8 @@
 import { z } from 'zod';
-import { GenerativeSchemaBase } from './GenerativeSchemaBase';
-import { ContainerSchema } from './ContainerSchema';
-import { GridSchema } from './GridSchema';
-import { CarouselSchema } from './CarouselSchema';
+import { GenerativeSchemaBase } from './GenerativeSchemaBase.js';
+import { ContainerSchema } from './ContainerSchema.js';
+import { GridSchema } from './GridSchema.js';
+import { CarouselSchema } from './CarouselSchema.js';
 
 export const RootSchema = GenerativeSchemaBase.extend({
     type: z.literal('root'),

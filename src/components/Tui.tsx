@@ -1,9 +1,9 @@
 import { Box, useApp, useInput } from "ink";
-import UserInput from "./UserInput";
-import UserOutput from "./UserOutput";
+import UserInput from "./UserInput.js";
+import UserOutput from "./UserOutput.js";
 import React, { useCallback, useState } from "react";
-import { generateUiResponse } from "../services/ai";
-import Thinking from "./Thinking";
+import { generateUiResponse } from "../services/ai.js";
+import Thinking from "./Thinking.js";
 
 function Tui() {
     
@@ -23,7 +23,7 @@ function Tui() {
 
     const { exit } = useApp();
 
-    useInput((input, key) => {
+    useInput((_input, key) => {
         if (key.escape) {
             exit();
         }

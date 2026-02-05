@@ -1,7 +1,7 @@
 import { z } from 'zod';
-import { GenerativeSchemaBase } from './GenerativeSchemaBase';
-import { CardSchema } from './CardSchema';
-import { ChartSchema } from './ChartSchema';
+import { GenerativeSchemaBase } from './GenerativeSchemaBase.js';
+import { CardSchema } from './CardSchema.js';
+import { ChartSchema } from './ChartSchema.js';
 
 export const CarouselSchema = GenerativeSchemaBase.extend({
     type: z.literal('carousel'),

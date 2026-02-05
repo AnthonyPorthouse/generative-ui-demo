@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { GenerativeSchemaBase } from './GenerativeSchemaBase';
+import { GenerativeSchemaBase } from './GenerativeSchemaBase.js';
 
 export const ChartSchema = GenerativeSchemaBase.extend({
     type: z.literal('chart'),

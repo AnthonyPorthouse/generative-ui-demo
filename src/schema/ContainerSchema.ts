@@ -1,8 +1,8 @@
 import { z } from 'zod';
-import { GenerativeSchemaBase } from './GenerativeSchemaBase';
-import { CardSchema } from './CardSchema';
-import { ChartSchema } from './ChartSchema';
-import { TableSchema } from './TableSchema';
+import { GenerativeSchemaBase } from './GenerativeSchemaBase.js';
+import { CardSchema } from './CardSchema.js';
+import { ChartSchema } from './ChartSchema.js';
+import { TableSchema } from './TableSchema.js';
 
 export const ContainerSchema = GenerativeSchemaBase.extend({
     type: z.literal('container'),

@@ -1,7 +1,7 @@
 import z from "zod";
-import { GenerativeSchemaBase } from "./GenerativeSchemaBase";
-import { TableHeaderSchema } from "./TableHeaderSchema";
-import { TableRowSchema } from "./TableRowSchema";
+import { GenerativeSchemaBase } from "./GenerativeSchemaBase.js";
+import { TableHeaderSchema } from "./TableHeaderSchema.js";
+import { TableRowSchema } from "./TableRowSchema.js";
 
 export const TableSchema = GenerativeSchemaBase.extend({
     type: z.literal('table'),

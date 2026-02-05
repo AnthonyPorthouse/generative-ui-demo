@@ -1,7 +1,7 @@
 import { Output, stepCountIs, streamText } from "ai";
-import { RootSchema } from "../schema";
+import { RootSchema } from "../schema/index.js";
 import { azure } from "@ai-sdk/azure";
-import { getUsers } from "../tools/getUsers";
+import { getUsers } from "../tools/getUsers.js";
 
 export async function generateUiResponse(prompt: string) {
     const model = azure.chat('gpt-5-mini');

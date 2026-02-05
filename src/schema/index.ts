@@ -1,7 +1,7 @@
-export { GenerativeSchemaBase } from './GenerativeSchemaBase';
-export { CardSchema } from './CardSchema';
-export { ChartSchema } from './ChartSchema';
-export { ContainerSchema } from './ContainerSchema';
-export { GridSchema } from './GridSchema';
-export { CarouselSchema } from './CarouselSchema';
-export { RootSchema } from './RootSchema';
+export { GenerativeSchemaBase } from './GenerativeSchemaBase.js';
+export { CardSchema } from './CardSchema.js';
+export { ChartSchema } from './ChartSchema.js';
+export { ContainerSchema } from './ContainerSchema.js';
+export { GridSchema } from './GridSchema.js';
+export { CarouselSchema } from './CarouselSchema.js';
+export { RootSchema } from './RootSchema.js';
