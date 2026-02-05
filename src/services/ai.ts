@@ -1,5 +1,5 @@
 import { Output, stepCountIs, streamText } from "ai";
-import { RootSchema } from "../schema/base";
+import { RootSchema } from "../schema";
 import { azure } from "@ai-sdk/azure";
 import { getUsers } from "../tools/getUsers";
 
